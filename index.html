@@ -1,11 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>400x800 Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* PAGE BACKGROUND */
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  display:flex;
+  justify-content:center;   /* CENTER LEFT-RIGHT */
+  padding-top:40px;         /* SPACE FROM TOP */
+  font-family:'Poppins',sans-serif;
+}
+
+/* RESUME BOX */
+.resume{
+  width:400px;
+  height:800px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  border-radius:26px;
+  padding:26px;
+  color:#fff;
+  box-shadow:0 40px 90px rgba(0,0,0,0.45);
+  position:relative;
+  overflow:hidden;
+}
+
+/* GLOW SHAPES */
+.shape{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(70px);
+  opacity:0.7;
+}
+
+.shape.one{
+  width:200px;
+  height:200px;
+  background:#ff0080;
+  top:-80px;
+  left:-80px;
+}
+
+.shape.two{
+  width:180px;
+  height:180px;
+  background:#00f2ff;
+  bottom:-70px;
+  right:-70px;
+}
+
+/* HEADER */
+header{
+  margin-bottom:22px;
+}
+
+h1{
+  font-size:1.9rem;
+  font-weight:700;
+}
+
+h1 span{
+  background:linear-gradient(90deg,#00f2ff,#ff0080);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.role{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.85rem;
+  color:#b8f7ff;
+  margin-top:6px;
+}
+
+/* SECTIONS */
+section{
+  margin-bottom:20px;
+}
+
+section h2{
+  font-size:1.05rem;
+  margin-bottom:10px;
+}
+
+section h2::after{
+  content:'';
+  width:34px;
+  height:3px;
+  background:linear-gradient(90deg,#ff0080,#00f2ff);
+  display:block;
+  margin-top:6px;
+  border-radius:10px;
+}
+
+p{
+  font-size:0.82rem;
+  line-height:1.6;
+  color:#d6eaff;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.skill{
+  background:rgba(255,255,255,0.12);
+  padding:10px;
+  border-radius:14px;
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.7rem;
+}
+
+/* FOOTER */
+footer{
+  position:absolute;
+  bottom:18px;
+  width:100%;
+  left:0;
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.65rem;
+  color:#9aaeff;
+}
+</style>
 </head>
+
 <body>
-    hi
+
+<div class="resume">
+  <div class="shape one"></div>
+  <div class="shape two"></div>
+
+  <header>
+    <h1>Alex <span>Nova</span></h1>
+    <div class="role">Frontend UI Developer</div>
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p>
+      Creative frontend developer focused on modern UI, clean layouts,
+      and visually powerful digital experiences.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">UI Design</div>
+      <div class="skill">Responsive</div>
+      <div class="skill">Web Layout</div>
+      <div class="skill">UX</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      alex@email.com<br>
+      +91 90000 00000<br>
+      India
+    </p>
+  </section>
+
+  <footer>
+    HTML • CSS • Modern UI
+  </footer>
+</div>
+
 </body>
 </html>
